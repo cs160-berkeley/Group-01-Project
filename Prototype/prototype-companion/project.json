@@ -1,0 +1,15 @@
+{
+    "title":"Prototype Companion",
+    "description":"This template can be used to create a basic KinomaJS application .",
+    "id":"prototype-companion.project.kinoma.marvell.com",
+    "tags":[
+        "emptySample"
+    ],
+    "Create":{
+        "main":"main"
+    },
+    "Element":{
+        "main":"main"
+    },
+    "iap140": {        "main":"main"    },
+}
