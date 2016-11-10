@@ -1,21 +1,80 @@
-let WhiteSkin = new Skin({ fill: "white" })
-let TextStyle = new Style({ color: "black", font: "8px" })
+import Pins from "pins";
 
-var MyLabel = Label.template(function($) { return {
-    left: 0, right: 0, height:10, style:TextStyle, string: $ }});
+let TaskbarSkin = new Skin({ fill: "#4A90E2" });
+let WhiteSkin = new Skin({ fill: "white" });
+let graySkin = new Skin({fill: "gray"});
+let TextStyle = new Style({ color: "black", font: "14px" })
+let BlackTextStyle = new Style({ color: "black", font: "20px" })
+let BlueTextStyle = new Style({ color: "#4A90E2", font: "14px" })
+let fieldStyle = new Style({color: 'black', font:  '14px', horizontal: 'left', vertical: 'middle', left: 5, right: 5, top: 5, bottom: 5});
+let fieldHintStyle = new Style({color: '#aaa', font: '10px', horizontal: 'left', vertical: 'middle', left: 5, right: 5, top: 5, bottom: 5});
 
-var MyScroller = Scroller.template(function($) { return {    left: 0, width: 160, top: 0, height: 120,     contents: [        new Column({            left: 0, right: 0, top: 0, height: 20,            contents: $.map(function($$) {
-            	trace($$+"\n");                return new MyLabel($$);            })        })    ]}});
+import {
+    HorizontalSlider, HorizontalSliderBehavior
+} from 'sliders';
 
-let MyField = Container.template($ => ({     width: 50, height: 36, left: $.left, top: $.top, skin: whiteSkin, contents: [        Scroller($, {             left: 4, right: 4, top: 4, bottom: 4, active: true,             Behavior: FieldScrollerBehavior, clip: true,             contents: [                Label($, {                     left: 0, top: 0, bottom: 0, skin: whiteSkin,                     style: fieldStyle, anchor: 'NAME',                    editable: true, string: $.name,                    Behavior: class extends FieldLabelBehavior {                        onEdited(label) {                            let data = this.data;                            trace(date + "\n");
-                        }                    },                }),                Label($, {                    left: 4, right: 4, top: 4, bottom: 4, style: fieldHintStyle,                    string: "", name: "hint"                }),            ]        })    ]}));
+import {
+    SwitchButton,
+    SwitchButtonBehavior
+} from 'switch';
 
-var MainContainer = new Column({
-	left: 0, right: 0, top: 0, bottom:0, skin: WhiteSkin,
+let MySliderTemplate = HorizontalSlider.template($ => ({
+    height: 90, left: 55, right: 55, top: $.top,
+    Behavior: class extends HorizontalSliderBehavior {
+        onValueChanged(container) {
+            trace("Value is: " + this.data.value + "\n");
+        }
+    }
+}));
+
+let MySwitchTemplate = SwitchButton.template($ => ({
+    height: 50, width: 100, left: $.left, top: $.top,
+    Behavior: class extends SwitchButtonBehavior {
+    	onValueChanged(container) {
+    	}
+    }
+}));
+
+let MainContainer = new Container({
+	top: 0, bottom: 0, left: 0, right: 0,
+	skin: WhiteSkin,
 	contents: [
-		new MyScroller(["one", "two", "three", "four"])
-	],
-	Behavior: class extends Behavior {        onTouchEnded(content) {            SystemKeyboard.hide();            content.focus();        }    }
+		new Label({
+			height: 20, left: 0, right: 0, top:0, string: "IoT Speaker", style: TextStyle, skin: TaskbarSkin,
+		}),
+		new Label({
+			height: 30, left: 25, width: 100, top: 40, string: "Speaker Volume", style: TextStyle,
+		}),
+		new MySliderTemplate({ min: 0, max: 100, value: 0, top: 45 }),
+		new Label({
+			height: 30, left: 25, width: 100, top: 140, string: "App Connection", style: TextStyle,
+		}),
+		new MySwitchTemplate({ value: 1, top: 130, left: 165 }),
+	]
+});
 
+let ActivatePins = function () {
+};
 
-});application.add(MainContainer);
+class AppBehavior extends Behavior {
+	onLaunch(application) {
+		Pins.configure({
+			led: {
+				require: "Digital", // use built-in digital BLL
+				pins: {
+					ground: { pin: 51, type: "Ground" },
+					digital: { pin: 52, direction: "output" },
+				}
+			},
+		},  success => {
+			if (success) {
+			   Pins.share("ws", {zeroconf: true, name: "pins-share-led"});
+			   ActivatePins();
+			   application.add(MainContainer);
+			} else {
+			   trace("Failed\n");
+			};
+		});
+	}
+}
+application.behavior = new AppBehavior();
