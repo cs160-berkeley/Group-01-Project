@@ -206,7 +206,6 @@ let MusicLayer = Container.template($ => ({
 let PlaylistLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-	
 		new Label({
 			height: 20, left: 0, right: 0, top:0, string: "Playlists", style: TextStyle, skin: TaskbarSkin,
 		}),
@@ -269,17 +268,34 @@ let CreateNewPlaylistLayer = new Container({
 let SearchLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-	
 		new Label({
 			height: 20, left: 0, right: 0, top:0, string: "Playlists Near Me", style: TextStyle, skin: TaskbarSkin,
 		}),
-		new Label({
-			height: 30, left: 10, right: 10, top: 50, string: "Priya's Playlist", style: BlackTextStyle,
-
+		new MyButtonTemplate({
+			height: 40, top: 50, textForLabel: "Search for Nearby Playlists",
+			behavior: class extends ButtonBehavior {
+				onTouchEnded(button) {
+					SearchLayer.add(new MyScroller(["Playlist 1", "Playlist 2", "Playlist 3"]))
+				}
+			}
 		}),
-
 	]
 });
+
+let SongLayer = new Container({
+	top: 0, bottom: 0, left: 0, right: 0,
+	contents: [
+		new Label({
+			height: 20, left: 0, right: 0, top:0, string: "Songs", style: TextStyle, skin: TaskbarSkin,
+		}),
+		new MyButtonTemplate({
+			height: 40, top: 50, textForLabel: "Add a song", 			
+			behavior: class extends ButtonBehavior {
+			},
+		}),
+		new MyScroller(["Song 1", "Song 2", "Song 3", "Song 4", "Song 5"]),	
+	]
+})
 
 let SettingsLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
@@ -307,16 +323,6 @@ let SettingsLayer = new Container({
 		}),
 	]
 });
-
-let SongLayer = new Container({
-	top: 0, bottom: 0, left: 0, right: 0,
-	contents: [
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Songs", style: TextStyle, skin: TaskbarSkin,
-		}),
-		new MyScrollerTemplate(["Song 1", "Song 2", "Song 3", "Song 4", "Song 5"]),	
-	]
-})
 
 let current_layer = 0;
 let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer };
