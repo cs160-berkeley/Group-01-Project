@@ -1,0 +1,941 @@
+
+Feedback on 
+Problem 
+Motivation and 
+User 
+Selection
+
+Cool idea for a common problem
+
+Good!
+
+A little confused for the task that is being tackled
+
+Target audience is good and focussed.
+
+interesting problem you're tackling.
+
+
+Target users unique
+
+Good statement of problem and solution
+
+Seems like a very niche product.
+ 
+Would be great for college students.
+
+
+The problem motivation was very clear - improve party experience.
+
+
+Clear and interesting.
+ 
+But not sure exactly what the connected device is.
+ 
+Is it a specific speaker, or any generic bluetooth speaker can be used?
+
+Target audience is clear and applicable to a lot of college students or partiers.
+ 
+The context and application space are also clear: parties.
+
+yes
+
+The need was clearly conveyed, and the users are well defined.
+
+
+Target user group is very interesting.
+ 
+The idea is creative.
+
+quite rushed didnt quite get it
+
+Interesting problem.
+ 
+Similar to the other music/bpm device.
+ 
+
+Intersting solution to a problem
+
+I like how you adjust volume sound to because you are aware of those around you.
+
+solving an interesting problem; good target audience
+
+Intended user/motivation is clear
+
+A moderately convincing need.
+ 
+Glad they clarified the target users in the 
+Q
+A, though 
+I think their slides/presentation did not show that well.
+ 
+Feedback purely based on noise seems questionable.
+ 
+
+The idea is good.
+ 
+But i'm not sure what they are connecting to.
+ 
+I assume it's connected to the house or sth.
+ 
+But i feel the target users still a bit large and ambiguous.
+ 
+
+Very clear target and user need
+
+Party noise problem, a real problem in parts of the country
+
+Clear target users and app is very interesting
+
+Described demographic was not readily obvious, but made sense with explanation.
+
+
+Interesting problem, useful solution.
+ 
+Well-targeted user group.
+
+
+Yes, they demonstrated a target market and why they will need this app.
+ 
+It's certainly an interesting space and idea.
+
+
+The inteface was clearly built for the target user they selected
+
+Very good
+
+Yes they did.
+ 
+fun goals and clear needs.
+ interesting context for cpartying college students
+too niche, interesting though
+
+Why 
+Hype addressed well.
+ 
+
+Creative idea! 
+Great clear target user group.
+ 
+
+The team has an application that helps regulate a party's audio.
+
+
+Very cool concept!
+
+Clear problem motivation and user selection, controlling sound of big parties seems interesting 
+
+Very good clear user need, i like the name too.
+
+clear motivation
+very clear target audience and need
+
+Clearly identified target user.
+  
+Relevant problem, good solution.
+ 
+
+Very interesting problem, definitely relatable problem.
+  
+
+The audience was very clear, and the need was clearly defined: partiers that are too loud.
+ 
+It was an interesting choice to make an app for loud parties, but not sure how effective it would be in real life.
+ 
+
+Showed clear need for the specific target group.
+
+
+Clearly state what their intended user 
+
+Good, but what if 
+I invite too many people? 
+Would the music start to become very quiet to balance out the noise from the people? 
+Isn't that harmful to the experience of the party? 
+interesting approach to 
+D
+Jing music at a party
+
+Good explanation of need for app.
+ 
+Good target user group also.
+
+
+They identified a relevant problem for many college students, and did a good job of delineating the changes before and after feedback.
+
+seems kind of niche but is cool
+
+Really like the idea behind the application
+very clear with target users and motivation for the application and how their app solves the problem
+
+The need was clearly described as people that want to have parties but don't want to disturb their neighbors.
+
+
+Nicely specific target userbase.
+ 
+
+Very clear
+
+Clear target users and problem/solution.
+ 
+Good context/app
+interesting need, especially b/c we're all college kids
+
+It seems like an interesting idea.
+ 
+I wouldn't know how useful it actually would be.
+ 
+This seems something that could easily be done using 
+Spotify.
+
+
+Very cool application, unique.
+ 
+They want to control the volume of a party.
+ 
+I like how it searches for nearby playlists, as 
+I know many people who would want to use this.
+
+real problem but interesting solution.
+ not convinced, party music dictates mood not the other way around.
+ makes more sense for people who aren't college age
+interesting problem and very appropriate for the targeted user
+
+Target audience is clear, need is clear, interesting application
+
+A little confusing, not sure if 
+I will use it.
+
+
+Yes, useful for people who don't want to annoy their neighbors.
+
+
+The motivation is interesting.
+ 
+It would be good to clarify your target user.
+ 
+It seemed as it was for college parties based on the picture in the slides
+
+The user selection was narrow enough, and 
+I like that they identified a problem that they probably have.
+
+
+I liked the premise of the app, 
+I feel as though it might not have addressed adjusting the volume according to outside laws as well as it could have
+
+Target user unclear in initial presentation.
+
+
+The group of partygoers might be a slightly broad generalization.
+ 
+The application seems to assume that the partygoers are young and rowdy.
+ 
+
+Idea was conveyed clearly.
+  
+Novel concept.
+
+
+The chosen application space was very interesting and the need for the app is quite clear.
+ 
+The chosen target users is also appropriate.
+ 
+This particular app/device is something 
+I would be interested in using.
+
+
+This is a really clear need 
+I would definitely use it.
+ 
+Really clear user.
+
+
+The motivation is really cool, there is definitely a multi-faceted need for that.
+ 
+It seems like users will be mostly high school and college students, but 
+I don't know that they have a huge motivation to use it if they don't care about their neighbors or the cops.
+
+
+The team did a great job on providing a solution for the problem.
+ 
+
+Hype has a great idea, a party management app in a sense helping hype up parties but keep the noise level tolerable.
+
+so very applicable and necessary for college environment and party life
+target user clear, party guys who may angry neighbors.
+ 
+
+There could have bias on the volume on detecting the party voice level, since the distance between detector and people, and the different age groups might have different voice level standards.
+ 
+It might not easy to determine the appropriate voice level.
+
+
+The problem is clear and interesting.
+ 
+You can probably considering integrating spotify api into the app.
+
+
+Good target user group and problem motivation!
+
+Very clear problem and precise target group, even giving an age range.
+ 
+The two aspects, both for users (guest suggestion feedback), and for non-users (noise control), of the app's solution is well-thought out.
+
+
+Not convincing.
+ 
+Didn't really convey a clear need.
+
+
+Good job showing the problem and describing the solution
+
+Very good selection group
+
+The problem is unique, 
+
+This product would need to be marketed as a music tool as well; otherwise 
+I would say it's tough to market only as volume control.
+ 
+Definitely an interesting goal and space
+
+Interesting concept and clear target user (people who don't want to make their neighbors mad with their loud music)
+
+Target users were a bit confusing
+unclear the user group by age or affiliation
+
+Very clear target market, party hosts
+
+The team conveyed a very clear need and the choice of the target users was very appropriate.
+  
+The context and application space are interesting.
+ 
+
+
+Feedback on 
+Interaction and 
+Visual 
+Design
+very clean and clear design
+
+Should pay more attention to details of 
+U
+I design, a little bit too simple.
+
+
+Very simple ui, for better or worse
+
+The 
+U
+I is pretty basic, could use more personality.
+
+could use a bit more color.
+
+
+Very bland.
+
+
+Good simple interface
+
+Features seem implemented; could use some work on visual design
+
+The visual was very simple, but 
+I think it looks fine.
+ 
+Not visually appealing.
+
+
+Icons on bottom are kind of hard to see
+
+Very appealing minimalist design with well-placed interface elements; interface is consistent between different pages
+yes
+
+The app was a bit boring--considering that its an app called "
+Hype" 
+I would instinctively imagine a more vibrant and exciting interface.
+
+
+Fond should be larger.
+ 
+Adding playlist is very nice.
+
+quite simple easy to look at
+
+Would have liked to see more direct interaction with the interface.
+
+
+The prototype is simple and easy to follow.
+ 
+I like how the features are not overly complicated and easy to understand.
+ 
+
+Very clear 
+U
+I
+
+Good job adjusting to user feedback.
+
+clear, straightforward design; 
+
+Clean, buttons a little smal
+
+The app was very minimal but clean and not confusing.
+ 
+The demo was representative of functionality.
+ 
+
+The visual design is simple, but maybe a little bit too simple? 
+But the bottom function bar should change the color.
+ 
+It's not that contrasting and hard to see.
+ 
+visual design is very clean and looks easy to use
+two features! thats cool
+
+The searching for new music feature seems hard to find for new users, 
+I did not notice a label
+
+Not the most visually appealing app but demo was fine
+
+App looks good! 
+It's simple but looks good to me.
+ 
+Their demo demonstrated a lot of functionality.
+ 
+
+Some necessary interactions may be difficult to implement, such as selecting songs from raw files.
+
+
+It did look good for this stage.
+ 
+It wasn't 100% understandable without explanation.
+ 
+The calibrate button only makes sense when you know how to use it.
+
+it looks clear and looks similar to the existing music apps so it must be easier to use.
+
+
+Nice
+needs some more work about some of the tasks that were presented but not covered
+very simple design that was straightforward
+simple, good for now
+
+The interaction was clear, the fonts were a little bit too small.
+
+
+App text could be bigger! but app is super clear and makes a ton of sense
+good use of 
+Kinoma library, minimal design
+
+The design is understandable.
+ 
+It is representative of the functionality.
+
+
+Bottom nav is very difficult to see.
+  
+Could be more visual, with imagery and colors.
+  
+However, it is quite clean which is good.
+
+
+Simple and effective design, no extraneous features
+
+I like the discoverable slider.
+
+very unclear to figure out how to calibrate and what auto volume would do without instructions 
+
+Straight forward 
+U
+I, explained 
+Calibrate feature volume, however the design doesnt really demonstrate what calibrate means.
+ 
+Not sure if music will be native in the app.
+ 
+
+Design looked like a potentially final-version, very well made.
+
+
+The app looked simple/ clear, but could have had a better aesthetic feel (using gradients, more colors, attention to positioning and size, etc).
+ 
+
+App design was clean.
+ 
+Slider should be photoshopped to contrast the app's background color.
+ 
+Larger font might be good since there's a lot of empty space.
+
+
+Calibrate function is very cool
+
+Font is too small
+
+Really cool interactions - lots of functionality.
+ 
+I'm sure it's coming later, but more colors would be nice to see in the app
+
+Very simple 
+U
+I, a little hard to figure out where you are in the app (maybe make title bigger?)
+
+The visual design has been well-thought out and iterated on based on the feedback.
+
+monotonous kind of right now? no button distinction that makes actions hard to remember where they are
+
+I think the design could look a little better and sleek
+nice simple and consistent 
+U
+I that is the same throughout the pages and has clear buttons and selectors; maybe add some visuals
+
+The design of 
+Hype looked pretty good.
+ 
+It was understandable and the demo was clear.
+
+
+The font was too small but the app did have a mostly clean look.
+
+font is small, volume meter is hard to understand relatively (i.
+e.
+ how much louder is being xcm to the right compared to ycm to the right)
+
+App looks very simple and the demo seems comprehensive.
+ 
+Could use slightly more aesthetic design.
+ 
+
+I think they made good changes to the 
+U
+I after testing
+
+The design seems a little plain, but only with a few changes it can look really good.
+
+
+Simple design, good low-fidelity prototype.
+ 
+app looked basic but understandable, needs more contrast and better styling
+
+Demo represented the main functionalities well however did not show all of the functionalities.
+ 
+The design of the app looked single
+
+Interesting idea, calibration function isnt super clear at first glance though.
+ 
+Interface is clean and simple looking
+
+Quite simple
+
+Simple and easy to use.
+
+
+The flow of the interface was very intuitive.
+
+
+The visual design of the app is pretty basic.
+ 
+Nothing much has been implemented
+
+The app functionality looks good, but 
+I think that it could use a lot more graphics to make it more appealing to the user
+
+Kind of bare in the beginning screen.
+ 
+Minimal functions is good, the function are clear.
+ 
+The wording on buttons are kind of ambiguous.
+ 
+I was very confused as to the whole playlist thing worked in the application.
+ 
+
+The calibration seems to be a bit complicated and did not entirely make sense.
+ 
+This function did not seem entirely intuitive.
+  
+
+The app was very bare-bones looking and needs a visual overhaul to appeal to aesthetics.
+  
+Button animations were a step in the right direction.
+
+
+Clicking on the songs and editing the playlist seemed a bit confusing but the aesthetics of the app were pleasing (simple and minimalistic).
+ 
+The demo did represent the functionality of the app.
+ 
+
+I really liked the look of the application
+
+The header and the icons would look nice if they were white, it might be more readable.
+ 
+The rest of the app could be more decorated or visually engaging as well, it's fairly plain.
+
+good representative prototype
+
+The application could improve; 
+I wish that it had more interactive features.
+
+interface looked good and clean,
+
+The app looks beautiful.
+ 
+Good revisions from feedback.
+
+design looks minimalist and intuitive
+
+The style of the app needs enhancement, not very pretty.
+  
+
+The design is simple and consistent.
+ 
+One suggest for making the display more attractive by bold text and bigger size, and give more instructions on how to operate the app.
+
+
+The interaction is clear, but you can add more visuals to help user navigate the app.
+
+
+Your app looked good! 
+I like the solutions you came up with
+
+Button font is really small on the application.
+ 
+
+The test run to determine max volume is very good for users who wouldn't be able to just know the d
+B value they want, but can judge it themselves.
+ 
+
+The interface was straightforward but lacking ingenuity.
+
+
+Your app could have more personality in the protoype considering it's a party music app (colors, etc.
+)
+
+Good presentation
+
+I like the navigation bar, typography could be better reminds me of pandora which has a crappy ui 
+
+The app looks good (
+I like the minimalism) but 
+I am not entirely sure how the playlists come into it.
+ 
+Does one actually play music from the app, or just store a playlist to access later?
+
+The app didn't look very visible from far.
+ 
+I didn't clearly see which things were clickable.
+
+
+Looks okay
+confused on how the songs are selected (manually or automatic)
+
+Could use a bit more styling to make it 'pop'
+
+Clean design and the interface is was overall understandable
+ 
+The app looks good in both its functionality and design itself.
+ 
+The demo represent the concept and functionality very well.
+  
+
+
+Feedback on 
+Presentation 
+Style and 
+Slides
+less words on slides
+
+Good in general.
+
+
+Presentation was aight
+
+Used a template, could use more personality
+presentation was able to convey app functionality.
+
+
+Well done slides
+
+Demo was slightly unclear with calibration features, but overall effective
+
+Information is displayed clearly
+
+The slides were pretty clean and clear - more pictures and less text was a good choice.
+
+
+Like the presentation organization.
+ 
+Really clear on what is being talked about.
+
+
+They talked about before and after feedback which is nice, you could see the difference between.
+
+the design can be moved down 
+engaged and clear speakers, good balance of images
+
+Video demo is clear.
+ 
+feel bad the thing bugged and took away time
+
+Could have probably practiced presentation a bit first to ensure that everything will go smoothly during day of.
+
+
+Presentation is sufficiently short.
+
+
+Comprehensive demo 
+
+Besides the other video playing, good job.
+
+clear, concise presentation; good pace;
+
+I liked the demo and sliders on the app
+
+Very minimal slides, but they got the job done.
+ 
+
+The presentation is clear and informative.
+ 
+The layout is fine.
+
+
+Thought out and visually pleasing
+solid presentation style
+
+Clear and informative presentation
+
+Good slides and good speaker 
+
+Slides looked good and were straightforward.
+
+
+Very simple presentation style.
+
+the presentation is clear
+
+Very good skills
+clear slides and followed the story
+funny and simple
+good mostly
+
+The presentation talking was a little bit too short.
+ 
+It was just the intro and the motivation.
+
+font is a bit small 
+
+The slides were a bit basic, but otherwise good job.
+
+
+I like that you talked about your feedback and how you iterated on it.
+
+
+Clear presentational 
+
+Good clear video, 
+too much text on the slides talked about a few differences between the first and second iteration.
+ nice
+
+Presenter has a strong communication skills.
+ 
+
+Clear implications on design interations and very understandable presentation.
+
+
+Presentation was clear, intro-ing live, while adding video.
+ 
+Technical problems with sliding w/ macbook was present, but not really major.
+ 
+
+Speaker was clear and provided detailed explanation.
+
+
+Liked the detail explanation of 
+U
+I iteration cycle 
+slides could be more aesthetic
+good slides - not too much text
+presentation was really good, but 
+I did get a bit lost about which feature was which 
+
+The video was succinct and to the point, and did a good job of explaining the functionality of the app.
+
+ok
+good presentation
+good pace of presentation and clearly sectioned and balanced slides
+
+The slides were clean and simple.
+ 
+The video quality was pretty good, the mic was slightly fuzzy but it was fine.
+
+
+Slides were nice and transparent.
+
+
+Clear, but dull
+
+Very good pacing, video, and clarity.
+ 
+Nailed it.
+ 
+clear
+
+The slides are simple and easy to read.
+
+
+Simple, nice presentation style.
+ 
+nice
+screenshots of prototypes were good to have 
+
+Slides are good, video is clear
+
+Okay
+
+It was nice how you showed screenshots of your initial design and what you've changed since then.
+
+
+The presentation went a little crazy but overall was concise  
+
+More clear explanation of each task
+
+Presentation was clear and simple.
+ 
+However, 
+I think this could be more helpful if features were elaborated on.
+
+
+The flow of the presentation was a bit flawed because of the fact that pulling up the slides took a bit of time and was not smooth.
+ 
+
+Slides were clear and done well.
+
+
+The pace of the presentation was great, numerous visuals were provided and the quality of the video was good.
+
+
+Visual aesthetics could be more appealing to the younger population.
+
+
+Very quick and efficient presentation! 
+clear presentation
+
+The presentation was great.
+ 
+It was a little bit hard to see some things from the back of the room, but it's no biggie.
+
+slide design could be more aesthetically pleasing, presentation was quite comprehensive
+
+Slides doesn't give specific details about 3 features.
+ 
+
+The pace is good, but the switching between video and slides is kinda awkward.
+
+
+Good presentation simple.
+ 
+
+Good organization- they identified their changes before and after user feedback as well.
+
+
+Presentation was great
+
+Good demo- the prototype could be more intuitive
+
+Very good presentation
+
+Organized, neat, cute slides
+
+Good and clear presentation, slides were clear
+maybe embed your video next time
+
+Slides could use some more text
+
+Slide ok 
+
+Very engaging good gesticulation
+the presentation was clean and simple
+ 
+The engagement of speakers is pretty good during the entire presentation.
+ 
+The visual aesthetic of slides is great and the balance of text and visuals on slides are well kept.
+  
+The quality of the app is amazing.
+ 
+
+
+Open/
+Misc 
+Feedback
+
+I don't get the idea tbh
+
+None?
+
+N/
+A
+nop
+
+I like how the prototype is simple and you cant tell it's not the final version.
+  
+I like that they also included before/after feedback to show they changes through the iterations.
+
+
+Make this and give it to every frat
+
+H
+Y
+P
+E
+
+I think in some places like florida, noise from parties can mess up sea turtle nests so this can help in that way too
+
+Needing to leave the house might be detrimental especially in closed spaces where you can't be certain distances from the  space.
+ i.
+e.
+ apartments.
+
+
+The demo may be better to be the last thing to show.
+
+first group to talk about the progress/iterations of their app.
+ good job!
+nice idea 
+
+Lit
+
+Needs a better summary.
+ 
+
+I liked that they showed the before and after feedback 
+
+Seemed like a neat idea overall.
+ 
+Particularly enjoyed the "juke box"-like anonymity of adding songs to the party playlist.
+
+
+Seemed very practice.
+ 
+Well done.
+ 
+beep beep beep beep beep
+
+Hype
+
+Knowing where the slides are might help.
+ 
+
+Could you add an automatic "notifier" functionality - so like it notifies your neighbors through text or email that you are going to have a party at a certain time?
+
+What is the device? 
+A speaker?
+
+Mentioned that its not ideal for college towns, but 
+I disagree.
+ 
+Most fraternities care about how loud theyrie being not because of their neighbors but because of the cops haha
+
+None
+
+Interesting project but opportunity for chaos if users disagree on what to add to the playlist.
+ 
+Might kind of require a homogeneous or at the very least respectful party audience.
+ 
+
+Cool app idea, actually super useful
