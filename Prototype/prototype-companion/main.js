@@ -32,7 +32,7 @@ import {
 } from 'switch';
 
 //Skins and Styles
-let TaskbarSkin = new Skin({ fill: "#4A90E2" });
+
 let WhiteSkin = new Skin({ fill: "white" });
 let graySkin = new Skin({fill: "gray"});
 let TextStyle = new Style({ color: "black", font: "14px" })
@@ -63,6 +63,17 @@ var TappedBlackButtonSkin = new Skin({
 });
 
 
+
+// Textures
+let hypeLogo = new Texture("assets2/Hype.png");
+
+let hypeSkin = new Skin({      width:349, height: 44,      texture: hypeLogo,      fill: "white",      aspect: "fit"});
+
+let navBarLogo = new Texture("assets2/NavBar.png");
+
+let TaskbarSkin = new Skin({ 
+	  fill: "white",       
+	  width:349, height: 70,      texture: navBarLogo,      fill: "white",});
 //Templates
 let MyButtonTemplate = Button.template($ => ({
     top: $.top, left:10,
@@ -170,11 +181,9 @@ var playlists = ["Priya's Playlist"];
 let MusicLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0, name: "MusicLayer",
 	contents: [
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Music", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new MyButtonTemplate({
-			height: 40, top: 50, textForLabel: "Songs",
+			height: 40, top: 150, textForLabel: "Songs",
 			behavior: class extends ButtonBehavior {
 				onTouchEnded(button) {
 					MainContainer.empty();
@@ -184,7 +193,7 @@ let MusicLayer = Container.template($ => ({
 			}
 		}),
 		new MyButtonTemplate({
-			height: 40, top: 100, textForLabel: "Playlists", 
+			height: 40, top: 200, textForLabel: "Playlists", 
 			behavior: class extends ButtonBehavior {
 				onTouchEnded(button) {
 					MainContainer.empty();
@@ -194,10 +203,10 @@ let MusicLayer = Container.template($ => ({
 			},
 		}),
 		new MyButtonTemplate({
-			height: 40, top: 150, textForLabel: "Artists"
+			height: 40, top: 250, textForLabel: "Artists"
 		}),
 		new Label({
-			height: 30, left: 10, width: 100, top: 200, string: "Recent Playlists", style: TextStyle,
+			height: 30, left: 10, width: 100, top: 280, string: "Recent Playlists", style: TextStyle,
 		}),
 		new MyScrollerTemplate(playlists, 230),
 	]
@@ -206,9 +215,7 @@ let MusicLayer = Container.template($ => ({
 let PlaylistLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Playlists", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new MyButtonTemplate({
 			height: 40, top:50, textForLabel: "Create a New Playlist", 			
 			behavior: class extends ButtonBehavior {
@@ -231,9 +238,7 @@ let CreateNewPlaylistLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 	
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Create a New Playlist", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new Label({
 			height: 30, left: 10, width: 100, top: 30, string: "Name: ", style: TextStyle,
 		}),
@@ -268,9 +273,7 @@ let CreateNewPlaylistLayer = new Container({
 let SearchLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Playlists Near Me", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new MyButtonTemplate({
 			height: 40, top: 50, textForLabel: "Search for Nearby Playlists",
 			behavior: class extends ButtonBehavior {
@@ -285,9 +288,7 @@ let SearchLayer = new Container({
 let SongLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Songs", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new MyButtonTemplate({
 			height: 40, top: 50, textForLabel: "Add a song", 			
 			behavior: class extends ButtonBehavior {
@@ -301,9 +302,7 @@ let SettingsLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 	
-		new Label({
-			height: 20, left: 0, right: 0, top:0, string: "Settings", style: TextStyle, skin: TaskbarSkin,
-		}),
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new Label({
 			height: 30, left: 50, top: 80, string: "Volume", style: BlackTextStyle,
 		}),
@@ -328,7 +327,7 @@ let current_layer = 0;
 let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer };
 
 let NavButton = Picture.template($ => ({
-	active: true, top: 5, bottom: 5, left: 45 + 90 * $.layer,
+	active: true, bottom: 5, left: 45 + 90 * $.layer,
 	width: 20, height: 20,
 	url: $.path,
 	behavior: Behavior({
@@ -355,9 +354,9 @@ let MainNavBar = Container.template($ => ({
 	height: 50, bottom: 0, left: 0, right: 0,
 	skin: TaskbarSkin,
 	contents: [
-		new NavButton({ path: "assets/MusicIcon.png", layer: 0 }),
-		new NavButton({ path: "assets/SearchIcon.png", layer: 1 }),
-		new NavButton({ path: "assets/SettingsIcon.png", layer:2 }),
+		new NavButton({ path: "assets2/MusicIcon.png", layer: 0,  }),
+		new NavButton({ path: "assets2/SearchIcon.png", layer: 1 }),
+		new NavButton({ path: "assets2/SettingsIcon.png", layer:2 }),
 
 	]
 }));
