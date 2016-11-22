@@ -336,20 +336,20 @@ let SettingsLayer = new Container({
 	
 		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new Label({
-			height: 30, left: 50, top: 80, string: "Volume", style: BlackTextStyle,
+			height: 30, left: 20, top: 80, string: "Volume", style: BlueTextStyle,
 		}),
 		new MySliderTemplate({
 			min: 1, max: 10, value: 1, top: 80,
 		}),
 		new Label({
-			height: 30, left: 50, top: 200, string: "Smart Shuffle", style: BlackTextStyle,
+			height: 30, left: 20, top: 180, string: "Smart Shuffle", style: BlueTextStyle,
 		}),
-		new MySwitchTemplate({ value: 0, top: 190, left: 210 }),
+		new MySwitchTemplate({ value: 0, top: 170, left: 210 }),
 		new Label({
-			height: 30, left: 50, top: 260, string: "Auto Volume", style: BlackTextStyle,
+			height: 30, left: 20, top: 220, string: "Auto Volume", style: BlueTextStyle,
 		}),
-		new MySwitchTemplate({ value: 0, top: 250, left: 210 }),
-		new MyButtonTemplate({
+		new MySwitchTemplate({ value: 0, top: 210, left: 210 }),
+		new MyBlueButtonTemplate({
 			height: 40, top: 320, textForLabel: "Calibrate"
 		}),
 	]
