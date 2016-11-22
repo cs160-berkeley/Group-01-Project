@@ -34,17 +34,21 @@ import {
 //Skins and Styles
 
 let WhiteSkin = new Skin({ fill: "white" });
+
 let graySkin = new Skin({fill: "gray"});
-let TextStyle = new Style({ color: "black", font: "14px" })
+let TextStyle = new Style({ color: "black", font: "22px Avenir", horizontal: 'left', vertical: 'left' })
+let CenteredTextStyle = new Style({ color: "white", font: "22px Avenir", horizontal: 'middle', vertical: 'middle'})
+
+let NormalBlueTextStyle = new Style({ color: "#124184", font: "22px Avenir Medium Oblique", horizontal: 'left', vertical: 'left' })
 let BlackTextStyle = new Style({ color: "black", font: "20px" })
-let BlueTextStyle = new Style({ color: "#4A90E2", font: "14px" })
+let BlueTextStyle = new Style({ color: "#124184", font: "24px Avenir Medium Oblique", horizontal: 'left', vertical: 'left' })
 let fieldStyle = new Style({color: 'black', font:  '14px', horizontal: 'left', vertical: 'middle', left: 5, right: 5, top: 5, bottom: 5});
 let fieldHintStyle = new Style({color: '#aaa', font: '10px', horizontal: 'left', vertical: 'middle', left: 5, right: 5, top: 5, bottom: 5});
 
 var BlueButtonSkin = new Skin({                
 				fill: "#ffffff", 
                 borders: {left: 1, right: 1, top: 1, bottom: 1}, 
-                stroke: "#3198D2"  
+                stroke: "#124184"  
 });
 var BlackButtonSkin = new Skin({                
 				fill: "#ffffff", 
@@ -52,9 +56,9 @@ var BlackButtonSkin = new Skin({
                 stroke: "#000000"  
 });
 var TappedBlueButtonSkin = new Skin({                
-				fill: "#3198D2", 
+				fill: "#124184", 
                 borders: {left: 1, right: 1, top: 1, bottom: 1}, 
-                stroke: "#ffffff"  
+                stroke: "gray"  
 });
 var TappedBlackButtonSkin = new Skin({                
 				fill: "#000000", 
@@ -73,13 +77,40 @@ let navBarLogo = new Texture("assets2/NavBar.png");
 
 let TaskbarSkin = new Skin({ 
 	  fill: "white",       
-	  width:349, height: 70,      texture: navBarLogo,      fill: "white",});
+	  width:349, height: 70,      texture: navBarLogo,      fill: "white",});
+
+let musicButtonLogo = new Texture("assets2/MusicButtonSkin.png");
+
+let MusicButtonSkin = new Skin({ 
+	  fill: "white",       
+	  width:300, height: 40,      texture: musicButtonLogo,});
+
+let BottomBorder = new Texture("assets2/BottomBorder.png");
+
+let BottomBorderSkin = new Skin({ 
+	  fill: "white",       
+	  width:300, height: 40,      texture: BottomBorder,});
+
+let playlist1logo = new Texture("assets2/Playlist1.png");
+
+let playlist1Skin = new Skin({ 
+	  width:40, height: 40,      texture: playlist1logo,
+      fill: "white",      aspect: "fit"});
 //Templates
 let MyButtonTemplate = Button.template($ => ({
     top: $.top, left:10,
-    right: 10, height: $.height, skin: BlueButtonSkin,
+    right: 10, height: $.height, skin: MusicButtonSkin,
     contents: [
-        Label($, { left: 0, right: 0, height: 55, string: $.textForLabel, style: TextStyle })
+        Label($, { left: 0, right: 0, height: 55, string: $.textForLabel, style: BlueTextStyle })
+    ],
+    Behavior: $.behavior
+}));
+
+let MyBlueButtonTemplate = Button.template($ => ({
+    top: $.top, left:50,
+    right: 50, height: $.height, skin: TappedBlueButtonSkin,
+    contents: [
+        Label($, { left: 0, right: 0, height: 55, string: $.textForLabel, style: CenteredTextStyle })
     ],
     Behavior: $.behavior
 }));
@@ -94,9 +125,10 @@ let MySliderTemplate = HorizontalSlider.template($ => ({
 }));
 
 let MyButton = Button.template(function($) { return {
-    left: 0, right: 0, height:30, skin: BlackButtonSkin, 
+    left: 0, right: 0, height:60, skin: BottomBorderSkin,
     contents: [
-        Label($, { left: 0, right: 0, height:20, string: $, style: TextStyle, name: "label" })
+    	new Content({ 		    top: 5, left: 5, width: 40, height:40, 		    skin: playlist1Skin, 		}),
+        Label($, { left: 60, right: 0, height:20, string: $, style: NormalBlueTextStyle, name: "label" })
     ],
     Behavior: class extends ButtonBehavior {
 		onTouchBegan(button) {
@@ -113,7 +145,7 @@ let MyButton = Button.template(function($) { return {
 }});
 
 let MyScrollerTemplate = Scroller.template(function(array) { return {
-    left: 0, left: 10, right: 10, top: 220, bottom: 0,
+    left: 0, left: 10, right: 10, top: 280, bottom: 0,
     contents: [
         new Column({
             left: 0, right: 0, top: 0, height: 30,
@@ -125,11 +157,11 @@ let MyScrollerTemplate = Scroller.template(function(array) { return {
 }});
 
 let MyScroller = Scroller.template(function(array) { return {
-    left: 0, left: 10, right: 10, top: 130, bottom: 0,
+    left: 0, left: 10, right: 10, top: 130, height:140,
     name: "Scroller",
     contents: [
         new Column({
-            left: 0, right: 0, top: 0, height: 30,
+            left: 0, right: 0, top: 0, height: 40,
             contents: array.map(function($$) {
                 return new MyButton($$);
             })
@@ -183,7 +215,7 @@ let MusicLayer = Container.template($ => ({
 	contents: [
 		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new MyButtonTemplate({
-			height: 40, top: 150, textForLabel: "Songs",
+			height: 40, top: 60, textForLabel: "Songs",
 			behavior: class extends ButtonBehavior {
 				onTouchEnded(button) {
 					MainContainer.empty();
@@ -193,7 +225,7 @@ let MusicLayer = Container.template($ => ({
 			}
 		}),
 		new MyButtonTemplate({
-			height: 40, top: 200, textForLabel: "Playlists", 
+			height: 40, top: 110, textForLabel: "Playlists", 
 			behavior: class extends ButtonBehavior {
 				onTouchEnded(button) {
 					MainContainer.empty();
@@ -203,12 +235,12 @@ let MusicLayer = Container.template($ => ({
 			},
 		}),
 		new MyButtonTemplate({
-			height: 40, top: 250, textForLabel: "Artists"
+			height: 40, top: 160, textForLabel: "Artists"
 		}),
 		new Label({
-			height: 30, left: 10, width: 100, top: 280, string: "Recent Playlists", style: TextStyle,
+			height: 30, left: 10, right: 10, top: 225, string: "Recent Playlists", style: TextStyle,
 		}),
-		new MyScrollerTemplate(playlists, 230),
+		new MyScrollerTemplate(playlists, 300),
 	]
 }));
 
@@ -228,7 +260,7 @@ let PlaylistLayer = Container.template($ => ({
 			},
 		}),
 		new Label({
-			height: 30, left: 0, width: 100, top: 100, string: "Playlists:", style: TextStyle,
+			height: 30, left: 10, width: 100, top: 100, string: "Playlists:", style: TextStyle,
 		}),
 		new MyScroller(playlists, 230),
 	]
@@ -240,16 +272,16 @@ let CreateNewPlaylistLayer = new Container({
 	
 		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
 		new Label({
-			height: 30, left: 10, width: 100, top: 30, string: "Name: ", style: TextStyle,
+			height: 30, left: 10, width: 100, top: 60, string: "Name: ", style: TextStyle,
 		}),
-		new MyField({ left: 100, top: 27, right:10, name: "Type Name Here..." }),
+		new MyField({ left: 60, top: 57, right:10, name: "Type Name Here..." }),
 		new Label({
-			height: 30, left: 10, width: 180, top: 70, string: "Make Playlist Discoverable", style: TextStyle,
+			height: 30, left: 10, width: 220, top: 90, string: "Make Playlist Discoverable", style: TextStyle,
 		}),
-		new MySwitchTemplate({ value: 0, top: 60, left: 190 }),
-		new MyScrollerTemplate(["Song 1", "Song 2", "Song 3", "Song 4", "Song 5"]),	
-		new MyButtonTemplate({
-			height: 40, top: 370, textForLabel: "Save Playlist", 			
+		new MySwitchTemplate({ value: 0, top: 82, left: 200 }),
+		new MyScroller(["Song 1", "Song 2", "Song 3", "Song 4"]),	
+		new MyBlueButtonTemplate({
+			height: 40, top: 370, textForLabel: "Save Playlist", style: CenteredTextStyle,			
 			behavior: class extends ButtonBehavior {
 					onTouchEnded(button) {
 			          	MainContainer.remove(layers[current_layer]);
