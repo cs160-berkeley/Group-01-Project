@@ -137,9 +137,6 @@ let MyButton = Button.template(function($) { return {
 		onTouchEnded(button) {
 			trace("tapped\n");
 	        button.skin = BlackButtonSkin;
-			MainContainer.empty();
-			MainContainer.add(SongLayer);
-			current_layer = 5;
         }
 	},
 }});
