@@ -37,6 +37,8 @@ let WhiteSkin = new Skin({ fill: "white" });
 
 let graySkin = new Skin({fill: "gray"});
 let TextStyle = new Style({ color: "black", font: "22px Avenir", horizontal: 'left', vertical: 'left' })
+let SmallTextStyle = new Style({ color: "black", font: "18px Avenir", horizontal: 'left', vertical: 'left' })
+
 let CenteredTextStyle = new Style({ color: "white", font: "22px Avenir", horizontal: 'middle', vertical: 'middle'})
 
 let NormalBlueTextStyle = new Style({ color: "#124184", font: "22px Avenir Medium Oblique", horizontal: 'left', vertical: 'left' })
@@ -110,7 +112,7 @@ let MyBlueButtonTemplate = Button.template($ => ({
     top: $.top, left:50,
     right: 50, height: $.height, skin: TappedBlueButtonSkin,
     contents: [
-        Label($, { left: 0, right: 0, height: 55, string: $.textForLabel, style: CenteredTextStyle })
+        Label($, { left: 0, right: 0, height: 55, string: $.textForLabel, style: CenteredTextStyle, name: "label" })
     ],
     Behavior: $.behavior
 }));
@@ -325,7 +327,46 @@ let SongLayer = new Container({
 		}),
 		new MyScroller(["Song 1", "Song 2", "Song 3", "Song 4", "Song 5"]),	
 	]
-})
+});
+
+let CalibrateLayer = new Container({
+	top: 0, bottom: 0, left: 0, right: 0,
+	contents: [
+		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Label({
+			height: 20, top: 50, string: "To help you calibrate the maximum volume desired,", 
+			style: SmallTextStyle,			
+		}),
+		new Label({
+			height: 20, top: 70, string: "our speakers will play a tone that will increase in", 
+			style: SmallTextStyle,			
+		}),
+		new Label({
+			height: 20, top: 90, string: "volume gradually. Just hit stop when it gets too loud!", 
+			style: SmallTextStyle,			
+		}),
+		new MyBlueButtonTemplate({
+			height: 40, top: 120, textForLabel: "Start",
+			behavior: class extends ButtonBehavior {
+					onTouchEnded(button) {
+						trace("SDF\n");
+						trace(button.label.string + " sdfsd\n");
+			          	if (button.label.string == "Start") {
+			          	
+			          		button.label.string = "Stop";
+			   
+			          		
+			        	} else {
+			            	button.label.string = "Calibration Finished!";	
+			        	
+			        	}
+			          	
+			          		
+			        }
+			},
+		}),
+	]
+});
 
 let SettingsLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
@@ -347,13 +388,24 @@ let SettingsLayer = new Container({
 		}),
 		new MySwitchTemplate({ value: 0, top: 210, left: 210 }),
 		new MyBlueButtonTemplate({
-			height: 40, top: 320, textForLabel: "Calibrate"
+			height: 40, top: 320, textForLabel: "Calibrate",
+			behavior: class extends ButtonBehavior {
+					onTouchEnded(button) {
+			          	MainContainer.remove(layers[current_layer]);
+						MainContainer.add(CalibrateLayer);
+						current_layer = 6;
+						trace(  " calibrateee\n");
+			        }
+			},
 		}),
 	]
 });
 
+
+
+
 let current_layer = 0;
-let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer };
+let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer, 6:CalibrateLayer };
 
 let NavButton = Picture.template($ => ({
 	active: true, bottom: 5, left: 45 + 90 * $.layer,
