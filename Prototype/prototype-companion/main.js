@@ -73,31 +73,48 @@ var TappedBlackButtonSkin = new Skin({
 // Textures
 let hypeLogo = new Texture("assets2/Hype.png");
 
-let hypeSkin = new Skin({      width:349, height: 44,      texture: hypeLogo,      fill: "white",      aspect: "fit"});
+let hypeSkin = new Skin({
+      width:349, height: 44,
+      texture: hypeLogo,
+      fill: "white",
+      aspect: "fit"
+});
 
 let navBarLogo = new Texture("assets2/NavBar.png");
 
 let TaskbarSkin = new Skin({ 
 	  fill: "white",       
-	  width:349, height: 70,      texture: navBarLogo,      fill: "white",});
+	  width:349, height: 70,
+      texture: navBarLogo,
+      fill: "white",
+});
 
 let musicButtonLogo = new Texture("assets2/MusicButtonSkin.png");
 
 let MusicButtonSkin = new Skin({ 
 	  fill: "white",       
-	  width:300, height: 40,      texture: musicButtonLogo,});
+	  width:300, height: 40,
+      texture: musicButtonLogo,
+});
 
 let BottomBorder = new Texture("assets2/BottomBorder.png");
 
 let BottomBorderSkin = new Skin({ 
 	  fill: "white",       
-	  width:300, height: 40,      texture: BottomBorder,});
+	  width:300, height: 40,
+      texture: BottomBorder,
+});
 
 let playlist1logo = new Texture("assets2/Playlist1.png");
 
 let playlist1Skin = new Skin({ 
-	  width:40, height: 40,      texture: playlist1logo,
-      fill: "white",      aspect: "fit"});
+	  width:40, height: 40,
+      texture: playlist1logo,
+      fill: "white",
+      aspect: "fit"
+
+});
+
 //Templates
 let MyButtonTemplate = Button.template($ => ({
     top: $.top, left:10,
@@ -129,7 +146,10 @@ let MySliderTemplate = HorizontalSlider.template($ => ({
 let MyButton = Button.template(function($) { return {
     left: 0, right: 0, height:60, skin: BottomBorderSkin,
     contents: [
-    	new Content({ 		    top: 5, left: 5, width: 40, height:40, 		    skin: playlist1Skin, 		}),
+    	new Content({ 
+		    top: 5, left: 5, width: 40, height:40, 
+		    skin: playlist1Skin, 
+		}),
         Label($, { left: 60, right: 0, height:20, string: $, style: NormalBlueTextStyle, name: "label" })
     ],
     Behavior: class extends ButtonBehavior {
@@ -138,7 +158,7 @@ let MyButton = Button.template(function($) { return {
         }
 		onTouchEnded(button) {
 			trace("tapped\n");
-	        button.skin = BlackButtonSkin;
+	        button.skin = BottomBorderSkin;
         }
 	},
 }});
@@ -212,7 +232,10 @@ var playlists = ["Priya's Playlist"];
 let MusicLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0, name: "MusicLayer",
 	contents: [
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new MyButtonTemplate({
 			height: 40, top: 60, textForLabel: "Songs",
 			behavior: class extends ButtonBehavior {
@@ -246,7 +269,10 @@ let MusicLayer = Container.template($ => ({
 let PlaylistLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new MyButtonTemplate({
 			height: 40, top:50, textForLabel: "Create a New Playlist", 			
 			behavior: class extends ButtonBehavior {
@@ -269,7 +295,10 @@ let CreateNewPlaylistLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 	
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new Label({
 			height: 30, left: 10, width: 100, top: 60, string: "Name: ", style: TextStyle,
 		}),
@@ -304,7 +333,10 @@ let CreateNewPlaylistLayer = new Container({
 let SearchLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new MyButtonTemplate({
 			height: 40, top: 50, textForLabel: "Search for Nearby Playlists",
 			behavior: class extends ButtonBehavior {
@@ -319,7 +351,10 @@ let SearchLayer = new Container({
 let SongLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new MyButtonTemplate({
 			height: 40, top: 50, textForLabel: "Add a song", 			
 			behavior: class extends ButtonBehavior {
@@ -332,7 +367,10 @@ let SongLayer = new Container({
 let CalibrateLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new Label({
 			height: 20, top: 50, string: "To help you calibrate the maximum volume desired,", 
 			style: SmallTextStyle,			
@@ -372,7 +410,10 @@ let SettingsLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 	
-		new Content({ 	    	top: 0, left: 0, height: 45, right: 0, 		    skin: hypeSkin, 		}),	
+		new Content({ 
+	    	top: 0, left: 0, height: 45, right: 0, 
+		    skin: hypeSkin, 
+		}),	
 		new Label({
 			height: 30, left: 20, top: 80, string: "Volume", style: BlueTextStyle,
 		}),
