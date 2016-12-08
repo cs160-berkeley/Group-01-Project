@@ -428,11 +428,17 @@ let SettingsLayer = new Container({
 		}),
 		new MySwitchTemplate({ value: 0, top: 170, left: 210 }),
 		new Label({
-			height: 30, left: 20, top: 220, string: "Auto Volume", style: BlueTextStyle,
+			height: 30, left: 20, top: 205, string: "Auto-choose songs based on crowd volume!", style: SmallTextStyle,
 		}),
-		new MySwitchTemplate({ value: 0, top: 210, left: 210 }),
+		new Label({
+			height: 30, left: 20, top: 250, string: "Auto Volume", style: BlueTextStyle,
+		}),
+		new Label({
+			height: 30, left: 20, top: 275, string: "Auto-reduce volume if crowd is too loud.", style: SmallTextStyle,
+		}),
+		new MySwitchTemplate({ value: 0, top: 240, left: 210 }),
 		new MyBlueButtonTemplate({
-			height: 40, top: 320, textForLabel: "Calibrate",
+			height: 40, top: 350, textForLabel: "Calibrate",
 			behavior: class extends ButtonBehavior {
 					onTouchEnded(button) {
 						MainContainer.empty()
