@@ -138,7 +138,7 @@ let MySliderTemplate = HorizontalSlider.template($ => ({
     height: 90, left: 50, right: 50, top: $.top,
     Behavior: class extends HorizontalSliderBehavior {
         onValueChanged(container) {
-            trace("Value is: " + this.data.value + "\n");
+            trace("in slider temp, Value is: " + this.data.value + "\n");
         }
     }
 }));
@@ -279,7 +279,7 @@ let PlaylistLayer = Container.template($ => ({
 					onTouchEnded(button) {
 			            trace("Pressed playlist\n");
 			            MainContainer.empty()
-						MainContainer.add(CreateNewPlaylistLayer)
+						MainContainer.add(new CreateNewPlaylistLayer())
 						current_layer = 4;
 			        }
 			},
@@ -291,7 +291,7 @@ let PlaylistLayer = Container.template($ => ({
 	]
 }));
 
-let CreateNewPlaylistLayer = new Container({
+let CreateNewPlaylistLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 	
@@ -312,9 +312,9 @@ let CreateNewPlaylistLayer = new Container({
 			height: 40, top: 370, textForLabel: "Save Playlist", style: CenteredTextStyle,			
 			behavior: class extends ButtonBehavior {
 					onTouchEnded(button) {
-			          	MainContainer.remove(layers[current_layer]);
+			          	MainContainer.empty();
 			      		playlists.push(playlistName);
-						MainContainer.add(new MusicLayer);
+						MainContainer.add(new MusicLayer());
 						current_layer = 0;
 						trace(playlists + " new\n");
 			        }
@@ -328,9 +328,10 @@ let CreateNewPlaylistLayer = new Container({
             content.focus();
         }
     }
-});
+}));
 
-let SearchLayer = new Container({
+let nearbyPlaylists = new MyScroller(["Playlist 1", "Playlist 2", "Playlist 3"]);
+let SearchLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 		new Content({ 
@@ -341,12 +342,12 @@ let SearchLayer = new Container({
 			height: 40, top: 50, textForLabel: "Search for Nearby Playlists",
 			behavior: class extends ButtonBehavior {
 				onTouchEnded(button) {
-					SearchLayer.add(new MyScroller(["Playlist 1", "Playlist 2", "Playlist 3"]))
+					MainContainer.add(nearbyPlaylists)
 				}
 			}
 		}),
 	]
-});
+}));
 
 let SongLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
@@ -364,7 +365,7 @@ let SongLayer = new Container({
 	]
 });
 
-let CalibrateLayer = new Container({
+let CalibrateLayer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
 	contents: [
 		new Content({ 
@@ -376,35 +377,37 @@ let CalibrateLayer = new Container({
 			style: SmallTextStyle,			
 		}),
 		new Label({
-			height: 20, top: 70, string: "our speakers will play a tone that will increase in", 
+			height: 20, top: 70, string: "our speakers will play a tone that will INCREASE in", 
 			style: SmallTextStyle,			
 		}),
 		new Label({
-			height: 20, top: 90, string: "volume gradually. Just hit stop when it gets too loud!", 
+			height: 20, top: 90, string: "volume gradually. Just hit STOP when it gets too loud!", 
 			style: SmallTextStyle,			
 		}),
 		new MyBlueButtonTemplate({
 			height: 40, top: 120, textForLabel: "Start",
 			behavior: class extends ButtonBehavior {
-					onTouchEnded(button) {
-						trace("SDF\n");
-						trace(button.label.string + " sdfsd\n");
-			          	if (button.label.string == "Start") {
-			          	
-			          		button.label.string = "Stop";
-			   
-			          		
-			        	} else {
-			            	button.label.string = "Calibration Finished!";	
-			        	
-			        	}
-			          	
-			          		
-			        }
+				onTouchEnded(button) {
+		          	if (button.label.string == "Start") {
+		          		button.label.string = "Stop";
+		          		// var cali_slider = new MySliderTemplate({ min: 0, max: 100, value: 10, top: 170});
+		          		// MainContainer.add(cali_slider);
+		          		// trace(cali_slider.behavior.data.value + "\n");
+		          		// while (cali_slider.behavior.data.value < 100) {
+		          		// 	cali_slider.behavior.data.value += 1;
+		          		// 	cali_slider.behavior.onAdapt(cali_slider);
+		          		// }
+		        	} else if (button.label.string == "Stop") {
+		            	button.label.string = "Calibration Finished!";
+		        	} else {
+		        		MainContainer.empty()
+		        		MainContainer.add(SettingsLayer)
+		        	}
+		        }
 			},
 		}),
 	]
-});
+}));
 
 let SettingsLayer = new Container({
 	top: 0, bottom: 0, left: 0, right: 0,
@@ -432,10 +435,9 @@ let SettingsLayer = new Container({
 			height: 40, top: 320, textForLabel: "Calibrate",
 			behavior: class extends ButtonBehavior {
 					onTouchEnded(button) {
-			          	MainContainer.remove(layers[current_layer]);
-						MainContainer.add(CalibrateLayer);
-						current_layer = 6;
-						trace(  " calibrateee\n");
+						MainContainer.empty()
+			          	// MainContainer.remove(layers[current_layer]);
+						MainContainer.add(new CalibrateLayer());
 			        }
 			},
 		}),
@@ -446,7 +448,8 @@ let SettingsLayer = new Container({
 
 
 let current_layer = 0;
-let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer, 6:CalibrateLayer };
+let layers = { 0: MusicLayer, 1: SearchLayer, 2: SettingsLayer, 3: PlaylistLayer, 4: CreateNewPlaylistLayer, 5: SongLayer, 6: 
+	CalibrateLayer };
 
 let NavButton = Picture.template($ => ({
 	active: true, bottom: 5, left: 45 + 90 * $.layer,
@@ -462,10 +465,12 @@ let NavButton = Picture.template($ => ({
 		    
 			if (this.layer == 0) {
 				MainContainer.add(new MusicLayer);
+			} else if (this.layer == 1) {
+				MainContainer.add(new SearchLayer);
 			} else if (this.layer == 3) {
-				MainContainer.add(new PlaylistLayer)
+				MainContainer.add(new PlaylistLayer);
 			} else {
-				MainContainer.add(layers[this.layer])
+				MainContainer.add(layers[this.layer]);
 			}
 			current_layer = this.layer;
 		}
